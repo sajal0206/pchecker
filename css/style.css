@@ -1,0 +1,126 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    user-select: none;
+}
+
+body::before {
+    content   : "";
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    background: linear-gradient(#ff0, #f0f);
+    width     : 100%;
+    height    : 100%;
+    clip-path : circle(50% at left 0%);
+    z-index   : -1;
+}
+
+body::after {
+    content   : "";
+    position  : absolute;
+    bottom    : 0;
+    right     : 0;
+    background: linear-gradient(#ff0, #f0f);
+    width     : 100%;
+    height    : 100%;
+    clip-path : circle(40% at right 100%);
+    z-index   : -1;
+}
+
+.main {
+    position       : absolute;
+    top            : 50%;
+    left           : 50%;
+    transform      : translate(-50%, -50%);
+    background     : #7497c559;
+    backdrop-filter: blur(10px);
+    min-width      : 50vh;
+    padding        : 5vh 10vh;
+    height         : 50vh;
+    border-radius  : 2vh;
+    border         : solid;
+    box-shadow     : 0 0.1vh 1vh 0.2vh rgb(0, 89, 255);
+    text-align     : center;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+.main .form {
+    display       : flex;
+    flex-direction: column;
+    gap           : 2vh;
+}
+
+.main .form label {
+    margin-top : 2vh;
+    font-size  : x-large;
+    font-weight: 900;
+}
+
+.main .form input,
+.main .form button {
+    height       : 3vh;
+    border-radius: 0.5vh;
+    border       : solid 0.1vh #698ddb;
+    padding      : 0.5vh;
+    font-size    : large;
+    font-weight  : 700;
+    transition   : 0.2s;
+}
+
+.main .form button {
+    font-size      : medium;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 5vh;
+    cursor         : pointer;
+}
+
+.main .form input:hover,
+.main .form button:hover {
+    transform : scale(1.1);
+    transition: 0.2s;
+    border    : solid 0.3vh #698ddb;
+}
+
+.main .form button:hover {
+    background: #698ddb;
+}
+
+.main .msg {
+    background   : #698ddb;
+    color        : aliceblue;
+    padding      : 1vh 2vh;
+    border-radius: 2vh;
+    font-weight  : bolder;
+}
+
+.main .n {
+    background   : #f13e3ed3;
+    color        : black;
+    padding      : 1vh 2vh;
+    border-radius: 2vh;
+    font-weight  : bolder;
+}
+
+.main .yn {
+    background   : #3fe03fd3;
+    color        : #fff;
+    text-align   : center;
+    padding      : 1vh 2vh;
+    border-radius: 2vh;
+    font-weight  : bolder;
+}
+
+.main .y {
+    background   : #23ff23d3;
+    color        : #000;
+    text-align   : center;
+    padding      : 1vh 2vh;
+    border-radius: 2vh;
+    font-weight  : bolder;
+}
