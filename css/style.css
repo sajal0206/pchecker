@@ -124,3 +124,23 @@ body::after {
     border-radius: 2vh;
     font-weight  : bolder;
 }
+
+@media screen and (max-width: 715px) {
+    * {
+        font-size: small;
+    }
+
+    .main {
+        width: fit-content;
+        padding: 1vh;
+    }
+}@media screen and (max-width: 501px) {
+    * {
+        font-size: x-small;
+    }
+
+    .main {
+        width: fit-content;
+        padding: 0;
+    }
+}
