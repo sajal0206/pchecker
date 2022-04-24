@@ -9,17 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Password Checker</title><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Password Checker</title>
 </head>
 
@@ -34,51 +23,6 @@
             <button id="submit">Check Password Strength</button>
             <button id="reset">Reset</button>
             <h2>Developed By Sajal Chandaiya</h2>
-        </div>
-    </div>
-</body>
-<script>
-    $(function () {
-        $("#submit").click(function () {
-            let val = $("#passwd").val();
-            let regExp = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]+[a-zA-Z0-9]/;
-            if (val.length <= 6) {
-                $("#msg").removeClass('msg');
-                document.getElementById("msg").innerHTML = "<span class='msg n'> * Password is Too Small Please Try Again * </span>";
-            } else {
-                $("#msg").removeClass('msg');
-                if (regExp.test(val)) {
-                    if (val.length > 6 && val.length < 8) {
-                        document.getElementById("msg").innerHTML = "<span class='msg yn'>* Password is secure. Please improved it's size *</span>";
-                    } else {
-                        document.getElementById("msg").innerHTML = "<span class='msg y'>* Your Password is safe and secure *</span>";
-                    }
-                } else {
-                    document.getElementById("msg").innerHTML = "<span class='msg n'> * Password is not secure please choose another one * </span>";
-                }
-            }
-        });
-        $("#reset").click(function () {
-            document.getElementById("passwd").value = null;
-            $("#msg").addClass('msg');
-            document.getElementById("msg").innerText = "* Your Password Strength will be shown here *";
-        });
-    });
-</script>
-
-</html>
-</head>
-
-<body>
-    <div class="main">
-        <span class="msg" id="msg">* Your Password Strength will be shown here *</span>
-        <div class="form">
-            <label for="Input">
-                Enter Password Below
-            </label>
-            <input type="text" name="passwd" id="passwd" autofocus>
-            <button id="submit">Check Password Strength</button>
-            <button id="reset">Reset</button>
         </div>
     </div>
 </body>
